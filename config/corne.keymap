@@ -51,9 +51,9 @@
         lower_layer {
             label = "lower";
             bindings = <
-&kp LG(GRAVE)   &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR  &kp LPAR &kp RPAR &trans
-&trans          &trans   &kp PP  &kp VOLDN &kp VOLUP &kp MUTE    &kp MINUS &kp UNDER &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
-&trans          &trans   &trans  &trans    &kp PREV  &kp NEXT    &kp EQUAL &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp TILDE
+&kp LG(GRAVE)   &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp PLUS  &kp LPAR &kp RPAR &kp MINUS &kp AMPS  &kp CARET
+&trans          &trans   &kp PP  &kp VOLDN &kp VOLUP &kp MUTE    &kp STAR  &kp LBKT &kp RBKT &kp FSLH  &kp PIPE  &kp BSLH
+&trans          &trans   &trans  &kp PREV  &kp NEXT  &trans      &kp UNDER &kp LBRC &kp RBRC &kp EQUAL &kp GRAVE &kp TILDE
                                     &trans  &trans  &trans      &trans  &trans &trans
             >;
         };
@@ -61,9 +61,9 @@
         raise_layer {
             label = "raise";
             bindings = <
-&trans &kp N1  &kp N2  &kp N3  &kp N4   &kp N5       &kp N6   &kp N7    &kp N8  &kp N9    &kp N0 &trans
-&trans &trans  &trans &trans   &trans   &trans       &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &trans &trans
-&trans &trans  &trans &trans   &trans   &trans       &trans   &trans    &trans  &trans    &trans &trans
+&trans &kp N1  &kp N2  &kp N3  &kp N4   &kp N5       &kp N6   &kp N7    &kp N8     &kp N9    &kp N0 &trans
+&trans &trans  &trans &trans   &trans   &trans       &kp LEFT &kp DOWN  &kp UP     &kp RIGHT &trans &trans
+&trans &trans  &trans &trans   &trans   &trans       &kp HOME &kp PG_UP &kp PG_DN  &kp END   &trans &trans
                         &trans  &trans  &trans       &trans  &trans &trans
             >;
         };
@@ -72,7 +72,7 @@
             label = "adjust";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans &trans &trans &trans &trans &trans 
+&bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans            &trans &trans   &trans  &trans    &trans &trans
                             &trans  &trans  &trans      &trans  &trans &trans
             >;
