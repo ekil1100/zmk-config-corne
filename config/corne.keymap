@@ -25,12 +25,12 @@
 #define NEXT    C_NEXT
 #define PREV    C_PREV
 
-#define OSX     0
-#define WIN     1
-#define LOW     2
-#define RAI     3
-#define ADJ     4
-#define NUM     5
+#define osx         0
+#define win         1
+#define lower       2
+#define raise       3
+#define adjust      4
+#define number      5
 
 
 / {
@@ -49,20 +49,20 @@
         default_layer {
             label = "osx";
             bindings = <
-&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-            &kp LALT  &lt LOW SPACE  &kp LGUI     &lt NUM RET  &lt RAI SPACE  &kp LCTRL
+&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
+&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
+&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
+        &kp LALT  &lt lower SPACE  &kp LGUI         &lt number RET  &lt raise SPACE  &kp LCTRL
             >;
         };
 
         win_layer {
             label = "win";
             bindings = <
-&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-            &kp LALT  &lt LOW SPACE  &kp LCTRL     &lt NUM RET  &lt RAI SPACE  &kp LGUI
+&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
+&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
+&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
+        &kp LALT  &lt lower SPACE  &kp LCTRL        &lt number RET  &lt raise SPACE  &kp LGUI
             >;
         };
  
@@ -91,7 +91,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7     &kp F8      &kp F9  &kp F10 &kp F11 &kp F12
 &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans     &trans      &trans  &trans  &trans  &trans
-&trans &trans &trans &trans &trans &trans            &tog WIN   &trans    &trans  &trans  &trans  &trans
+&trans &trans &trans &trans &trans &trans            &tog win   &trans    &trans  &trans  &trans  &trans
                          &trans  &trans  &trans      &trans  &trans &trans
             >;
         };
