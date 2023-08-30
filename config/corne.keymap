@@ -38,8 +38,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <lower raise>;
+            then-layer = <adjust>;
         };
     };
 
@@ -92,7 +92,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7     &kp F8      &kp F9  &kp F10 &kp F11 &kp F12
 &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans     &trans      &trans  &trans  &trans  &trans
 &trans &trans &trans &trans &trans &trans            &tog win   &trans    &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans      &trans  &trans &trans
+                         &trans  &trans  &trans      &trans  &trans  &trans
             >;
         };
 
