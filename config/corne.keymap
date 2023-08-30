@@ -25,6 +25,14 @@
 #define NEXT    C_NEXT
 #define PREV    C_PREV
 
+#define OSX     0
+#define WIN     1
+#define LOW     2
+#define RAI     3
+#define ADJ     4
+#define NUM     5
+
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -44,7 +52,17 @@
 &mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
 &mt HYPER ESC &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
 &sk LSHFT     &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-            &kp LALT  &lt 1 SPACE  &kp LGUI     &lt 4 RET  &lt 2 SPACE  &kp LCTRL
+            &kp LALT  &lt LOW SPACE  &kp LGUI     &lt NUM RET  &lt RAI SPACE  &kp LCTRL
+            >;
+        };
+
+        win_layer {
+            label = "win";
+            bindings = <
+&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
+&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
+&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
+            &kp LALT  &lt LOW SPACE  &kp LCTRL     &lt NUM RET  &lt RAI SPACE  &kp LGUI
             >;
         };
  
@@ -71,9 +89,9 @@
         adjust_layer {
             label = "adjust";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans            &tog 5  &tog 0  &trans  &trans &trans &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7     &kp F8      &kp F9  &kp F10 &kp F11 &kp F12
+&bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans     &trans      &trans  &trans  &trans  &trans
+&trans &trans &trans &trans &trans &trans            &tog WIN   &tog OSX    &trans  &trans  &trans  &trans
                          &trans  &trans  &trans      &trans  &trans &trans
             >;
         };
@@ -85,16 +103,6 @@
 &trans &trans &trans &trans &trans &trans       &kp PLUS &kp N4 &kp N5 &kp N6 &kp MINUS &kp EQUAL
 &trans &trans &trans &trans &trans &trans       &kp N0   &kp N1 &kp N2 &kp N3 &kp DOT  &kp RET
                      &trans &trans &trans       &trans &trans &trans
-            >;
-        };
-
-        win_layer {
-            label = "win";
-            bindings = <
-&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-            &kp LALT  &lt 1 SPACE  &kp LCTRL     &lt 4 RET  &lt 2 SPACE  &kp LGUI
             >;
         };
     };
