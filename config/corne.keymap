@@ -69,9 +69,9 @@
         lower_layer {
             label = "lower";
             bindings = <
-&kp LG(GRAVE)   &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp STAR  &kp LBKT &kp RBKT &kp FSLH &kp AMPS  &kp CARET
-&kp LC(GRAVE)   &trans   &kp PP  &kp VOLDN &kp VOLUP &kp MUTE       &kp PLUS  &kp LPAR &kp RPAR &kp MINUS  &kp PIPE  &kp BSLH
-&trans          &trans   &trans  &kp PREV  &kp NEXT  &trans         &kp UNDER &kp LBRC &kp RBRC &kp EQUAL &kp GRAVE &kp TILDE
+&kp LG(GRAVE)   &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp STAR  &kp LBKT &kp RBKT &kp FSLH  &kp AMPS  &kp CARET
+&kp LC(GRAVE)   &trans   &kp PP  &kp VOLDN &kp VOLUP &kp MUTE       &kp MINUS &kp LPAR &kp RPAR &kp PLUS  &kp PIPE  &kp BSLH
+&trans          &trans   &trans  &kp PREV  &kp NEXT  &trans         &kp UNDER &kp LBRC &kp RBRC &kp EQUAL &kp TILDE &kp GRAVE
                                       &trans  &trans  &trans        &trans  &trans &trans
             >;
         };
