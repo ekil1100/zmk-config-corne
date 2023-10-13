@@ -52,7 +52,7 @@
 &mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
 &mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
 &sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-        &kp LALT  &lt lower SPACE  &kp LGUI         &lt number RET  &lt raise SPACE  &kp LCTRL
+        &kp LALT  &kp LGUI  &lt lower SPACE         &lt raise SPACE &lt number RET  &kp LCTRL
             >;
         };
 
@@ -62,7 +62,7 @@
 &mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
 &mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
 &sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-        &kp LALT  &lt lower SPACE  &kp LCTRL        &lt number RET  &lt raise SPACE  &kp LGUI
+        &kp LALT  &kp LCTRL &lt lower SPACE         &lt raise SPACE  &lt number RET  &kp LGUI
             >;
         };
  
