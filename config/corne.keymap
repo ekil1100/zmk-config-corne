@@ -18,7 +18,7 @@
 #define BT4     BT_SEL 4
 #define BTC     BT_CLR
 
-#define PP      C_PP
+#define PLAY      C_PP
 #define VOLUP   C_VOL_UP
 #define VOLDN   C_VOL_DN
 #define MUTE    C_MUTE
@@ -69,9 +69,9 @@
         lower_layer {
             label = "lower";
             bindings = <
-&kp LG(GRAVE) &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp STAR  &kp FSLH  &kp LBRC &kp RBRC &kp AMPS  &kp CARET
-&kp LC(GRAVE) &kp N1 &kp N2 &kp N3 &kp N4 &kp N5            &kp MINUS &kp PLUS  &kp LPAR &kp RPAR &kp PIPE  &kp BSLH
-&trans        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0            &kp UNDER &kp EQUAL &kp LBKT &kp RBKT &kp TILDE &kp GRAVE
+&kp LG(GRAVE) &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp STAR  &kp LBRC  &kp LBKT &kp RBKT &kp RBRC  &kp AMPS
+&kp LC(GRAVE) &kp N1 &kp N2 &kp N3 &kp N4 &kp N5            &kp MINUS &kp PLUS  &kp LPAR &kp RPAR &kp BSLH  &kp PIPE
+&trans        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0            &kp UNDER &kp EQUAL &kp LT   &kp GT   &kp TILDE &kp GRAVE
                             &trans  &trans  &trans        &trans  &trans &trans
             >;
         };
@@ -79,9 +79,9 @@
         raise_layer {
             label = "raise";
             bindings = <
-&trans &trans &kp PP    &kp VOLUP  &kp MUTE  &trans        &kp LC(PLUS) &kp LC(MINUS) &kp LC(N0) &trans    &trans  &trans
-&trans &trans &kp PREV  &kp VOLDN  &kp NEXT  &trans        &kp LEFT     &kp DOWN      &kp UP     &kp RIGHT &trans  &trans
-&trans &trans &trans  &trans    &trans     &trans          &kp HOME     &kp PG_DN     &kp PG_UP  &kp END   &trans  &kp CAPS
+&trans &trans &trans   &trans  &trans  &kp CARET        &kp LC(PLUS) &kp LC(MINUS) &kp LC(N0) &trans    &trans  &kp DEL
+&trans &trans &trans &kp PLAY  &kp MUTE  &kp VOLUP        &kp LEFT     &kp DOWN      &kp UP     &kp RIGHT &trans  &trans
+&trans &trans &trans  &kp PREV    &kp NEXT  &kp VOLDN     &kp HOME     &kp PG_DN     &kp PG_UP  &kp END   &trans  &kp CAPS
                         &trans  &trans  &trans             &trans  &trans &trans
             >;
         };
@@ -89,9 +89,9 @@
         adjust_layer {
             label = "adjust";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7     &kp F8      &kp F9  &kp F10 &kp F11 &kp F12
-&bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 &bt BTC      &trans     &trans      &trans  &trans  &trans  &trans
-&trans &trans &trans &trans &trans &trans            &tog win   &trans    &trans  &trans  &trans  &trans
+&bt BTC &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4      &kp CARET &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &trans   &trans  &trans  &trans  &trans  &trans
+&kp F7  &kp F8 &kp F9  &kp F10 &kp F11 &kp F12       &tog win &trans   &trans  &trans  &trans  &trans
                          &trans  &trans  &trans      &trans  &trans  &trans
             >;
         };
@@ -101,7 +101,7 @@
             bindings = <
 &trans &trans &trans &kp EXCL &kp DLLR &kp PRCNT    &kp STAR &kp N7 &kp N8 &kp N9 &kp FSLH &kp BSPC
 &trans &trans &trans &kp LPAR &kp RPAR &kp CARET    &kp MINUS &kp N4 &kp N5 &kp N6 &kp PLUS &kp ESC
-&trans &trans &trans &trans &trans &kp COLON    &kp N0   &kp N1 &kp N2 &kp N3 &kp DOT  &kp EQUAL
+&trans &trans &trans &kp LBRC &kp RBRC &kp COLON    &kp N0   &kp N1 &kp N2 &kp N3 &kp DOT  &kp EQUAL
                      &trans &trans &trans         &trans &trans &trans
             >;
         };
