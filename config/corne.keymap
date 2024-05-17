@@ -25,8 +25,8 @@
 #define NEXT    C_NEXT
 #define PREV    C_PREV
 
-#define osx         0
-#define win         1
+#define win         0
+#define osx         1
 #define lower       2
 #define raise       3
 #define adjust      4
@@ -46,16 +46,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            label = "osx";
-            bindings = <
-&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-        &kp LALT  &kp LGUI  &lt lower SPACE         &lt raise RET &kp LCTRL &tog number
-            >;
-        };
-
         win_layer {
             label = "win";
             bindings = <
@@ -65,7 +55,17 @@
         &kp LALT  &kp LCTRL &lt lower SPACE         &lt raise RET &kp LGUI &tog number
             >;
         };
- 
+
+        osx_layer {
+            label = "osx";
+            bindings = <
+&mt MEH   TAB &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
+&mt HYPER ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
+&sk LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
+        &kp LALT  &kp LGUI  &lt lower SPACE         &lt raise RET &kp LCTRL &tog number
+            >;
+        };
+
         lower_layer {
             label = "lower";
             bindings = <
@@ -91,7 +91,7 @@
             bindings = <
 &bt BTC &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4      &kp CARET &trans  &trans  &trans  &trans  &trans
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &trans   &trans  &trans  &trans  &trans  &trans
-&kp F7  &kp F8 &kp F9  &kp F10 &kp F11 &kp F12       &tog win &trans   &trans  &trans  &trans  &trans
+&kp F7  &kp F8 &kp F9  &kp F10 &kp F11 &kp F12       &tog osx &trans   &trans  &trans  &trans  &trans
                          &trans  &trans  &trans      &trans  &trans  &trans
             >;
         };
